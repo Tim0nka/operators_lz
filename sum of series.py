@@ -10,10 +10,12 @@ S = round(S, E)
 
 while Sum < sigma:
     Sum += Decimal(1)/Decimal(n) ** 2
+    print(Sum)
     n+=1
 
 
-if Sum - sigma > sigma - (Sum - Decimal(1/Decimal(n) ** 2)):
+if Sum - sigma > sigma - (Sum - (Decimal(1)/Decimal(n) ** 2)):
     n -= 1
-n -= 1
+if sigma < 1:
+    n -= 1
 print(n)
