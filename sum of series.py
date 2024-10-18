@@ -14,8 +14,9 @@ while Sum < sigma:
     n+=1
 
 
-if Sum - sigma > sigma - (Sum - (Decimal(1)/Decimal(n) ** 2)):
+if n != 1 and (Sum - Decimal(S) < Decimal(S) - (Sum - Decimal((1/(n-1)**2)))):
     n -= 1
-if sigma < 1:
-    n -= 1
+else:
+    n = 1
+n -= 1
 print(n)
